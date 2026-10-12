@@ -1,0 +1,71 @@
+{
+  "authority": "Local observations only; not independent certification",
+  "checks": [
+    {
+      "command": "python3 -B line-1/tools/endpoint-policy/test_policy.py",
+      "status": "fulfilled",
+      "result": {
+        "chunk_id": "53caa6",
+        "wall_time_seconds": 0.222720366,
+        "exit_code": 0,
+        "original_token_count": 288,
+        "output": "test_ambiguous_or_credential_urls_rejected (__main__.Tests.test_ambiguous_or_credential_urls_rejected) ... ok\ntest_audit_input_bound (__main__.Tests.test_audit_input_bound) ... ok\ntest_cli_rejected_lists_and_malformed_input_are_controlled (__main__.Tests.test_cli_rejected_lists_and_malformed_input_are_controlled) ... ok\ntest_forbidden_method_still_precedes_network (__main__.Tests.test_forbidden_method_still_precedes_network) ... ok\ntest_native_capture_and_inspection_keep_relay (__main__.Tests.test_native_capture_and_inspection_keep_relay) ... ok\ntest_only_exact_numeric_http_route (__main__.Tests.test_only_exact_numeric_http_route) ... ok\ntest_pinned_relay_offline_roundtrip (__main__.Tests.test_pinned_relay_offline_roundtrip) ... ok\ntest_public_https_and_exact_relay (__main__.Tests.test_public_https_and_exact_relay) ... ok\ntest_rejected_native_endpoint_never_reaches_network (__main__.Tests.test_rejected_native_endpoint_never_reaches_network) ... ok\ntest_rejected_url_is_not_echoed (__main__.Tests.test_rejected_url_is_not_echoed) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.012s\n\nOK\n"
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/pinned-snapshot/test_pinned.py",
+      "status": "fulfilled",
+      "result": {
+        "chunk_id": "47e759",
+        "wall_time_seconds": 0.23272648,
+        "exit_code": 0,
+        "original_token_count": 283,
+        "output": "test_capture_pins_actual_number (__main__.Tests.test_capture_pins_actual_number) ... ok\ntest_changed_hash_rejected (__main__.Tests.test_changed_hash_rejected) ... ok\ntest_combined_size_limit (__main__.Tests.test_combined_size_limit) ... ok\ntest_inspect_cli_offline_and_controlled_errors (__main__.Tests.test_inspect_cli_offline_and_controlled_errors) ... ok\ntest_malformed_supply_rejected (__main__.Tests.test_malformed_supply_rejected) ... ok\ntest_offline_tampering_rejected (__main__.Tests.test_offline_tampering_rejected) ... ok\ntest_pending_and_invalid_tags_no_reads (__main__.Tests.test_pending_and_invalid_tags_no_reads) ... ok\ntest_readonly_guard_precedes_network (__main__.Tests.test_readonly_guard_precedes_network) ... ok\ntest_response_limits_and_envelope (__main__.Tests.test_response_limits_and_envelope) ... ok\ntest_wrong_chain_stops_before_call (__main__.Tests.test_wrong_chain_stops_before_call) ... ok\ntest_wrong_explicit_block_stops_before_call (__main__.Tests.test_wrong_explicit_block_stops_before_call) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.031s\n\nOK\n"
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/snapshot-check/test_checks.py",
+      "status": "fulfilled",
+      "result": {
+        "chunk_id": "ea69d4",
+        "wall_time_seconds": 0.222779447,
+        "exit_code": 0,
+        "original_token_count": 146,
+        "output": "test_forbidden_methods_never_open_network (__main__.Checks.test_forbidden_methods_never_open_network) ... ok\ntest_malformed_response (__main__.Checks.test_malformed_response) ... ok\ntest_null_response_cli_controlled (__main__.Checks.test_null_response_cli_controlled) ... ok\ntest_offline_summary (__main__.Checks.test_offline_summary) ... ok\ntest_parameter_validation (__main__.Checks.test_parameter_validation) ... ok\ntest_response_limit (__main__.Checks.test_response_limit) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.015s\n\nOK\n"
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/endpoint-policy/endpoint_policy.py --demo",
+      "status": "fulfilled",
+      "result": {
+        "chunk_id": "5a31b8",
+        "wall_time_seconds": 0.119592597,
+        "exit_code": 0,
+        "original_token_count": 86,
+        "output": "{\n  \"network_used\": false,\n  \"results\": [\n    {\n      \"accepted\": true,\n      \"endpoint\": \"https://ethereum-rpc.publicnode.com\"\n    },\n    {\n      \"accepted\": true,\n      \"endpoint\": \"https://eth.drpc.org\"\n    },\n    {\n      \"accepted\": true,\n      \"endpoint\": \"http://127.0.0.1:44117/rpc/1\"\n    }\n  ],\n  \"schema\": \"rpc-endpoint-policy/1\"\n}\n"
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/pinned-snapshot/pinned_snapshot.py inspect < line-1/tools/endpoint-policy/example-pinned-zto.json",
+      "status": "fulfilled",
+      "result": {
+        "chunk_id": "592b79",
+        "wall_time_seconds": 0.1370185,
+        "exit_code": 0,
+        "original_token_count": 116,
+        "output": "{\n  \"block_hash\": \"0xea2afe14dcd44dcb4fce5d96d02449f0e950bd74889e9c7bfe9b8f498fe9ccc8\",\n  \"block_number\": \"26177688\",\n  \"evidence_limits\": \"Provider observation with before/after block identity checks; not cryptographic proof, independent corroboration, or a guarantee of finality. A reorg between reads and back again can escape detection.\",\n  \"token\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n  \"total_supply_base_units\": \"1000000000000000000000000000\"\n}\n"
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/snapshot-check/check_snapshot.py < line-1/tools/endpoint-policy/example-zto.json",
+      "status": "fulfilled",
+      "result": {
+        "chunk_id": "6b6ae0",
+        "wall_time_seconds": 0.132790552,
+        "exit_code": 0,
+        "original_token_count": 109,
+        "output": "{\n  \"captured_at\": \"2026-10-12T17:04:28Z\",\n  \"endpoint\": \"https://ethereum-rpc.publicnode.com\",\n  \"evidence_limits\": \"Provider observation; not proof of authenticity, finality or current state.\",\n  \"method\": \"eth_call\",\n  \"params\": [\n    {\n      \"data\": \"0x18160ddd\",\n      \"to\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\"\n    },\n    \"finalized\"\n  ],\n  \"result\": \"0x0000000000000000000000000000000000000000033b2e3c9fd0803ce8000000\"\n}\n"
+      }
+    }
+  ]
+}

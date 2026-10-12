@@ -1,0 +1,63 @@
+{
+  "round": 24,
+  "wall": {
+    "paths": [
+      "artifacts/line-1/wall.png",
+      "artifacts/line-1/wall-v4.png"
+    ],
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "color": "8-bit RGB",
+    "bytes": 3837769,
+    "sha256": "648fd12358681ec811c8eb2a707f4399fa5dc46631f7c2ea4a0785ecb7cd5179",
+    "decode_check": "passed"
+  },
+  "thumbnail": {
+    "path": "dist/line-1/24.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "baseline JPEG",
+    "bytes": 70854,
+    "decode_check": "passed; also visually inspected"
+  },
+  "visual_review": {
+    "patch": [
+      250,
+      650,
+      160,
+      80
+    ],
+    "changed_pixels": 3662,
+    "ancestor_pixels_outside_patch": "unchanged",
+    "pepe_preserved": true,
+    "digits_per_inherited_hand": 5,
+    "new_hands": 0,
+    "text_added": false,
+    "unmet_requirements": []
+  },
+  "method": "Built-in imagegen pigment insert; standard-library pigment compositing and JPEG conversion",
+  "checks": {
+    "new_offline_tests": 10,
+    "ancestor_regressions": 17,
+    "live_https_zto_capture": "passed",
+    "live_https_pinned_zto_capture": "passed",
+    "historical_live_relay": "connection refused; offline interoperability tests passed",
+    "offline_demo": "passed",
+    "retained_live_examples_inspected": "passed",
+    "goal_and_older_records_unchanged": true,
+    "record_and_formats": "passed",
+    "scope_and_file_sizes": "passed",
+    "named_outputs_untracked": true
+  },
+  "limitations": [
+    "Local checks and visual review carry no independent authority.",
+    "The historical relay was unavailable; no live relay capture success is claimed.",
+    "Snapshots record provider observations, not cryptographic proof or independent finality.",
+    "The inherited rock texture and all ancestor paintings are deliberately preserved."
+  ]
+}

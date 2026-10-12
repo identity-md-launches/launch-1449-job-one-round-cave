@@ -23,8 +23,7 @@ def quantity(value):
 
 def public_read(endpoint, method, params):
     rpc.validate_request(method, params)
-    if not isinstance(endpoint, str) or not endpoint.startswith('https://'):
-        raise ValueError('endpoint must use HTTPS')
+    rpc.validate_endpoint(endpoint)
     body = json.dumps({'jsonrpc': '2.0', 'id': 1, 'method': method, 'params': params}).encode()
     req = urllib.request.Request(endpoint, data=body, headers={
         'Content-Type': 'application/json', 'User-Agent': 'Pepeolithic-Pinned-Snapshot/1.0'})
@@ -48,8 +47,7 @@ def check_block(block, number=None):
 
 
 def capture(endpoint=rpc.DEFAULT_RPC, tag='finalized', read=None):
-    if not isinstance(endpoint, str) or not endpoint.startswith('https://'):
-        raise ValueError('endpoint must use HTTPS')
+    rpc.validate_endpoint(endpoint)
     if not rpc.block_tag(tag):
         raise ValueError('invalid block tag')
     if tag == 'pending':
@@ -84,8 +82,7 @@ def inspect(bundle):
         raise ValueError('invalid snapshot fields')
     if bundle['schema'] != 'pinned-zto-snapshot/1' or bundle['chain_id'] != '0x1':
         raise ValueError('unsupported schema or chain')
-    if not isinstance(bundle['endpoint'], str) or not bundle['endpoint'].startswith('https://'):
-        raise ValueError('invalid endpoint')
+    rpc.validate_endpoint(bundle['endpoint'])
     stamp = bundle['captured_at']
     if not isinstance(stamp, str) or not stamp.endswith('Z'):
         raise ValueError('capture time must be UTC')

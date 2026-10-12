@@ -3,6 +3,9 @@
 import argparse
 import datetime as dt
 import json
+import ipaddress
+import re
+import urllib.parse
 import sys
 import urllib.error
 import urllib.request
@@ -10,6 +13,7 @@ import urllib.request
 DEFAULT_RPC = "https://ethereum-rpc.publicnode.com"
 USER_AGENT = "Pepeolithic-RPC-Snapshot/2.0 (read-only public data)"
 MAX_RESPONSE_BYTES = 4 * 1024 * 1024
+
 # Deliberately small: new methods require an explicit review, never a prefix rule.
 READ_METHODS = {
     "eth_blockNumber": 0, "eth_chainId": 0, "net_version": 0,
@@ -19,6 +23,41 @@ READ_METHODS = {
     "eth_getBlockByNumber": 2, "eth_getBlockByHash": 2,
     "eth_getTransactionByHash": 1, "eth_getTransactionReceipt": 1,
 }
+
+
+def validate_endpoint(endpoint):
+    """Return the original URL, or raise ValueError without opening a connection."""
+    if not isinstance(endpoint, str) or not endpoint or len(endpoint) > 2048:
+        raise ValueError('endpoint must be nonempty text, at most 2048 characters')
+    if any(ord(c) <= 32 or ord(c) >= 127 for c in endpoint) or "\\" in endpoint:
+        raise ValueError('endpoint must use printable ASCII without whitespace or backslashes')
+    if '?' in endpoint or '#' in endpoint:
+        raise ValueError('endpoint must not contain a query or fragment')
+    parts = urllib.parse.urlsplit(endpoint)
+    if parts.username is not None or parts.password is not None:
+        raise ValueError('endpoint must not contain credentials')
+    host = parts.hostname
+    port = parts.port  # Also rejects malformed/out-of-range ports.
+    if not host or (port is not None and port == 0) or parts.netloc.endswith(':'):
+        raise ValueError('endpoint requires a host and a valid nonzero port if specified')
+    if parts.scheme == 'http' and endpoint.startswith('http://'):
+        if (port is not None and parts.netloc == '127.0.0.1:' + str(port)
+                and parts.path == '/rpc/1'):
+            return endpoint
+        raise ValueError('HTTP requires exact 127.0.0.1:<port>/rpc/1')
+    if parts.scheme != 'https' or not endpoint.startswith('https://'):
+        raise ValueError('HTTPS or exact numeric-loopback HTTP relay required')
+    if ':' in host:
+        try:
+            ipaddress.IPv6Address(host)
+        except ValueError as exc:
+            raise ValueError('invalid IPv6 host') from exc
+    else:
+        if len(host) > 253 or any(not re.fullmatch(r'[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?', label)
+                                 for label in host.split('.')):
+            raise ValueError('invalid ASCII hostname')
+    return endpoint
+
 
 
 def hex_data(value, byte_count=None):
@@ -92,8 +131,7 @@ def main():
     try:
         params = json.loads(args.params)
         validate_request(args.method, params)
-        if not args.rpc.startswith("https://"):
-            raise ValueError("RPC endpoint must use HTTPS")
+        validate_endpoint(args.rpc)
         body = json.dumps({"jsonrpc": "2.0", "id": 1, "method": args.method, "params": params}).encode()
         request = urllib.request.Request(args.rpc, data=body, headers={"Content-Type": "application/json", "User-Agent": USER_AGENT})
         with urllib.request.urlopen(request, timeout=20) as response:

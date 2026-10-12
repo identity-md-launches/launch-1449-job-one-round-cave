@@ -19,8 +19,7 @@ def summarize(snapshot):
     if set(snapshot) != fields:
         raise ValueError('snapshot must have the five capture fields')
     rpc.validate_request(snapshot['method'], snapshot['params'])
-    if not isinstance(snapshot['endpoint'], str) or not snapshot['endpoint'].startswith('https://'):
-        raise ValueError('expected an HTTPS endpoint')
+    rpc.validate_endpoint(snapshot['endpoint'])
     captured = snapshot['captured_at']
     if not isinstance(captured, str) or not captured.endswith('Z'):
         raise ValueError('capture time must be UTC with a Z suffix')
