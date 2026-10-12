@@ -1,0 +1,30 @@
+{
+  "name": "Pepe Compares the Flints",
+  "image": "https://api.imd.fun/artifacts/18bb3a6851b6102a078b3d87ed48cf863555679e1f6da4848037f15e8b189ef4",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 24
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "unsigned-diff"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe spots a changed edge before trusting the second stone."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline EIP-1559 transaction decoding"
+    }
+  ]
+}

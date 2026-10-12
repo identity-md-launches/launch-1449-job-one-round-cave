@@ -1,0 +1,60 @@
+{
+  "wall": {
+    "paths": [
+      "artifacts/line-3/wall-v4.png",
+      "artifacts/line-3/wall.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "18bb3a6851b6102a078b3d87ed48cf863555679e1f6da4848037f15e8b189ef4",
+    "bytes": 3973406
+  },
+  "thumbnail": {
+    "path": "dist/line-3/24.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 75109
+  },
+  "preservation": {
+    "inheritedSha256": "d6a30c3e2d564f2382497f84078e5f2c52572d022b3c85d53ed4eac22c5b01c5",
+    "editRectangle": [
+      615,
+      900,
+      240,
+      165
+    ],
+    "changedPixels": 35773,
+    "changedPixelsOutsideRectangle": 0
+  },
+  "tests": {
+    "newPassed": 10,
+    "inheritedPassed": 23
+  },
+  "visualReview": {
+    "reviewed": true,
+    "pepe": "Inherited broad mouth and heavy-lidded eyes retained.",
+    "visibleHandDigits": [
+      5,
+      5
+    ],
+    "newHandsOrStencils": 0,
+    "forbiddenVisualElementsFound": [],
+    "observation": "Two worn ochre flints below the scroll, one chipped; all ancestral marks retained. Local review, not independent certification."
+  },
+  "unmetVisualRequirements": [],
+  "checks": {
+    "recordSchema": true,
+    "recordHash": true,
+    "continuingWallIdentical": true,
+    "oldRecordsAndGoalByteIdentical": true,
+    "imageFormatsAndDimensions": true,
+    "changedPathsWithinScope": true,
+    "newNonArtifactFilesUnder100KB": true,
+    "malformedCliExit": 2,
+    "demoWorksFromOtherDirectory": true,
+    "requiredPngUntracked": true
+  }
+}
