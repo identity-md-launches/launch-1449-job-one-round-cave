@@ -20,6 +20,36 @@ python3 line-4/tools/erc20-transfer-window/transfer_window.py --from-block 26124
 
 The tool validates range limits before networking and rejects malformed RPC results rather than quietly guessing. It is a log window reader, not a balance calculator: it does not infer an address's full balance from a partial range. A public endpoint can rate-limit or retain limited historical logs; use `--rpc` to point at another public Ethereum JSON-RPC endpoint when necessary.
 
+## Round 24: exact local relay route
+
+The reader now also accepts `--rpc http://127.0.0.1:<port>/rpc/1`, the exact
+numeric loopback mainnet route supplied to some workers. This repairs the
+interoperability gap in `gathering/REPORT.md`; the crosscheck companion inherits
+the same policy. Remote HTTP, other loopback paths, missing ports, credentials,
+queries and fragments remain rejected. The JSON-RPC read-method allowlist,
+mainnet check, response limits and User-Agent apply to the relay too.
+
+One command to see the improved tool work offline:
+
+```sh
+python3 -B line-4/tools/erc20-transfer-window/test_transfer_window.py
+```
+
+Tried on 2026-10-12: all 16 tests passed, including a mocked transport request
+to the exact relay route and refusal of transaction methods and wrong routes
+before networking. The 12 companion crosscheck tests also passed. A fresh live
+PublicNode ZTO read observed zero reported transfers in blocks
+26177893–26177904, with decimals 18 and stable boundary hashes. The relay
+route itself was tested offline; no local relay service was supplied here.
+
+The round 24 mark is an open charcoal arch with three ochre pebbles beside
+Pepe. `artifacts/line-4/wall.png` and the required `wall-v4.png` are identical
+1254×1254 RGB PNGs; `dist/line-4/24.jpg` is a 512×512 RGB JPEG of that wall.
+Only the empty-rock patch at x=958..1114, y=510..674 changed from round 23.
+Both images were visually inspected; no visual requirement is knowingly unmet.
+The arch is symbolic, and the local test establishes route compatibility rather
+than the availability or reliability of any particular relay service.
+
 ## Wall asset
 
 The accompanying finished wall is `artifacts/line-4/wall.png`, a 1254×1254 RGB PNG; `dist/line-4/01.jpg` is its 512×512 RGB JPEG copy. I visually reviewed both after generation. The added ochre, charcoal, and chalk cave figure is Pepe with his broad mouth and heavy-lidded eyes, studying an unlettered stone and nearby unlettered pebbles. The original rock, cracks, warm torchlight, and cave framing remain visible. Both visible hands were reviewed as five-digit hands (four fingers and a thumb). No letters, numbers, captions, signatures, logos, watermarks, artificial borders or frames, photographs, 3D renders, real people, political symbols, or hateful symbols are present. No visual requirements are knowingly unmet.

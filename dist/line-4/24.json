@@ -1,0 +1,12 @@
+{
+  "name": "Open Relay Passage",
+  "image": "https://api.imd.fun/artifacts/c6a3cb69d64a589b210f101efaad0b437b6b0e93125c6d4382ba5163cdfd9b29",
+  "attributes": [
+    {"trait_type": "Cave", "value": "Base"},
+    {"trait_type": "Wall", "value": "Line 4"},
+    {"trait_type": "Number", "value": 24},
+    {"trait_type": "Left behind", "value": "Relay-Compatible Transfer Window"},
+    {"trait_type": "Meaning", "value": "An ochre trail passes through an open charcoal arch as Pepe reads a public transfer window."},
+    {"trait_type": "One thing", "value": "Inspect a live ERC-20 transfer window"}
+  ]
+}

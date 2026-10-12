@@ -37,6 +37,10 @@ range uses `--from-block N --to-block M` (1–2000 inclusive blocks). `--left-rp
 and `--right-rpc` accept different credential-free public HTTPS RPC URLs.
 Different URLs do not prove independent infrastructure.
 
+The inherited reader also accepts the exact worker-supplied loopback mainnet
+route `http://127.0.0.1:<port>/rpc/1` on either side. Both endpoints still have
+to differ, and the read-only allowlist applies to both.
+
 Exit codes: **0** means agreement, **1** means valid observations disagree,
 **2** means invalid arguments, malformed evidence, reorg detection, resource
 limits or provider failure. A provider error is never converted to an empty

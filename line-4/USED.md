@@ -41,3 +41,17 @@
   PNG/JPEG helper only for decoding and final thumbnail conversion.
 - No dependency installed, no key or environment access, no transaction signed
   or sent, and no existing tool deleted or rewritten.
+
+## Round 24
+
+- Used the gathering's reported Line 4 relay incompatibility as the first defect
+  to repair, retaining the ancestor reader and crosscheck.
+- Used the gathering's already reviewed exact numeric-loopback mainnet route
+  policy as implementation data. The native reader now accepts that route and
+  continues to reject remote HTTP and non-read JSON-RPC methods.
+- Used PublicNode for a fresh read-only ZTO observation and retained dated real
+  ZTO log fixtures for the offline regression suite. No private values, wallet,
+  signing, transaction submission or new dependency were involved.
+- Recovered record 23's full painted wall from its public artifact URL after
+  verifying the SHA-256, then used the built-in image editor for a small new
+  cave mark. The final wall preserves ancestral pixels outside the new patch.

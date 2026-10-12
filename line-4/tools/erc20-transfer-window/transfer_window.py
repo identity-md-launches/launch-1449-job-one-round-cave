@@ -88,11 +88,16 @@ def as_quantity(number):
 def validate_endpoint(endpoint):
     try:
         parts = urllib.parse.urlsplit(endpoint)
-        if (parts.scheme != "https" or not parts.hostname or parts.username is not None
-                or parts.password is not None or parts.query or parts.fragment):
-            raise ValueError("public HTTPS endpoint without credentials/query/fragment required")
+        if (not parts.hostname or parts.username is not None or parts.password is not None
+                or parts.query or parts.fragment):
+            raise ValueError("credential-free endpoint without query/fragment required")
         if parts.port is not None and not 1 <= parts.port <= 65535:
             raise ValueError("invalid port")
+        public_https = parts.scheme == "https"
+        local_mainnet_relay = (parts.scheme == "http" and parts.hostname == "127.0.0.1"
+                               and parts.port is not None and parts.path == "/rpc/1")
+        if not (public_https or local_mainnet_relay):
+            raise ValueError("public HTTPS or exact 127.0.0.1:<port>/rpc/1 required")
     except ValueError as exc:
         raise RpcError("invalid RPC endpoint: {}".format(exc)) from exc
 

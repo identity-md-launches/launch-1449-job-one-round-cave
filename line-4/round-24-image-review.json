@@ -1,0 +1,29 @@
+{
+  "round": 24,
+  "wall": {
+    "paths": ["artifacts/line-4/wall.png", "artifacts/line-4/wall-v4.png"],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "bytes": 3918132,
+    "sha256": "c6a3cb69d64a589b210f101efaad0b437b6b0e93125c6d4382ba5163cdfd9b29"
+  },
+  "thumbnail": {
+    "path": "dist/line-4/24.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "mode": "RGB",
+    "bytes": 73860
+  },
+  "preservation": {
+    "ancestor_sha256": "aed2993fc42cc4805042362941eea403c04948f8aeeec21b4e60265e7460c338",
+    "patch_rectangle": [958, 510, 1115, 675],
+    "changed_pixels_inside_rectangle": 24964,
+    "all_pixels_outside_rectangle_identical": true
+  },
+  "generator": "built-in image_gen edit",
+  "unmet_visual_requirements": [],
+  "review": "Inspected the full PNG and 512-pixel JPEG. An open charcoal arch and three ochre dabs were added on empty rock. Pepe, ancestral five-digit hands, rock, cracks, torchlight and framing remain; no new hand or text was observed."
+}

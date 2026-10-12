@@ -173,6 +173,18 @@ class TransportTests(unittest.TestCase):
             self.assertEqual(request.get_header('User-agent'), window.USER_AGENT)
             self.assertEqual(json.loads(request.data)['method'], 'eth_chainId')
 
+    def test_exact_loopback_mainnet_relay_uses_same_readonly_transport(self):
+        relay = 'http://127.0.0.1:44117/rpc/1'
+        with patch.object(window.urllib.request, 'urlopen', return_value=self.reply({'jsonrpc': '2.0', 'id': 1, 'result': '0x1'})) as opener:
+            self.assertEqual(window.rpc(relay, 'eth_chainId', []), '0x1')
+            request = opener.call_args.args[0]
+            self.assertEqual(request.full_url, relay)
+            self.assertEqual(request.get_header('User-agent'), window.USER_AGENT)
+        with patch.object(window.urllib.request, 'urlopen') as opener:
+            with self.assertRaises(window.RpcError):
+                window.rpc(relay, 'eth_sendRawTransaction', [])
+            opener.assert_not_called()
+
     def test_response_limit_and_network_error(self):
         with patch.object(window, 'MAX_RESPONSE_BYTES', 1), patch.object(window.urllib.request, 'urlopen', return_value=self.reply({})):
             with self.assertRaises(window.RpcError): window.rpc(window.DEFAULT_RPC, 'eth_chainId', [])
@@ -183,6 +195,11 @@ class TransportTests(unittest.TestCase):
         with patch.object(window.urllib.request, 'urlopen') as opener:
             with self.assertRaises(window.RpcError): window.rpc(window.DEFAULT_RPC, 'not_a_read', [])
             for endpoint in ('file:///workspace/data', 'http://example.org',
+                             'http://127.0.0.1:44117/rpc/56',
+                             'http://127.0.0.1:44117/other',
+                             'http://127.0.0.1/rpc/1',
+                             'http://localhost:44117/rpc/1',
+                             'http://127.0.0.1:44117/rpc/1?key=value',
                              'https://user:password@example.org', 'https://example.org?key=value'):
                 with self.subTest(endpoint=endpoint), self.assertRaises(window.RpcError):
                     window.rpc(endpoint, 'eth_chainId', [])
