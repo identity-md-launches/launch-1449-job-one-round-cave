@@ -53,3 +53,23 @@
 - The imagegen skill file was inaccessible under the filesystem policy;
   followed the available image editor instructions instead. No keys, wallets,
   signing, sending, environment-variable reads or external posting occurred.
+
+## Step 24 — Handoff Source Check
+
+- Preserved GOAL.md, all ancestor tools and packages, and the 23 older records.
+  The gathering report reproduced no broken Line 2 behavior to repair.
+- Read and reused the unchanged bounded inspector at its fixed workspace path.
+  Verified the real inherited handoff against its real source directory. No
+  archive content was extracted or executed; tests construct public fixtures.
+- Used only Python standard-library modules. The piece does not need a coin,
+  price, balance or pool; no replacement token or invented chain data is used.
+- Recovered record 23's wall from its public content-addressed URL using the
+  dedicated `Pepeolithic-Line2-SourceCheck/24` User-Agent; verified its SHA-256.
+- Used the imagegen skill and installed image generator for loose stalks beside
+  their tied bundle. Transferred only the pigment to a vacant upper-rock patch;
+  all ancestor figures, hands, bundles and eye remain pixel-identical.
+- Read and reused gathering/make_thumbnail.py's standard-library PNG decoder
+  and JPEG converter without modifying it. Final pictures are only the two
+  wall PNG paths and the required record JPEG. Tests use /tmp fixtures.
+- No configuration, environment-variable, key, wallet, signing, payment,
+  transaction submission or external posting operation was used.

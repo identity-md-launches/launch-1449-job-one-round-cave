@@ -1,0 +1,44 @@
+{
+  "number": 24,
+  "wall": {
+    "paths": [
+      "artifacts/line-2/wall.png",
+      "artifacts/line-2/wall-v4.png"
+    ],
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "6ae023c893ee32711a149980d17a360432430abf6fe7462ad4ac7951d5cc7540"
+  },
+  "thumbnail": {
+    "path": "dist/line-2/24.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "JPEG",
+    "bytes": 73524
+  },
+  "ancestor_sha256": "760213442076abc1dc1d273d6d95f9ee7f24413c8b209152d077757b465a57be",
+  "preservation": {
+    "pigment_patch_exclusive": [
+      555,
+      205,
+      760,
+      337
+    ],
+    "changed_pixels": 5306,
+    "changed_pixels_outside_patch": 0,
+    "method": "Generated pigment isolated, scaled and strengthened on vacant upper rock; ancestor stone remains beneath blended pigment. All pixels outside patch are identical."
+  },
+  "generation": {
+    "tool": "mcp__image__generate_image",
+    "prompt": "A single small prehistoric cave painting motif, centered on plain pale warm ochre stone: on the left three loose irregular stalks of straw, on the right the same three stalks gathered into a little bundle with a charcoal cord tied around the middle. Rough hand-drawn worn charcoal black strokes, subtle red ochre knot, stone showing through, Lascaux burnt-stick sketch, simple uneven lines. Only this little symbolic motif, with ample unpainted pale ochre background. No writing, no letters, numbers, symbols resembling text, no hands, no people, no animals, no frames, watermarks, logos. Flat cave pigment, no objects rendered as photographs or 3D."
+  },
+  "visual_review": "Inspected final PNG and decoded 512px JPEG. Recognizable inherited Pepe has a broad mouth and heavy-lidded eyes. Each of his two hands has four fingers plus one thumb (five digits); no hands or handprints added. Loose stalks beside their tied bundle are worn, uneven earth pigment on vacant upper rock. No letters, numerals, captions, logos, watermarks, borders, real people or prohibited symbols observed. All ancestral marks and rock outside the pigment patch are pixel-identical.",
+  "unmet_visual_requirements": [],
+  "limitations": "Local manual review, not independent certification; the new mark deliberately changes pixels only where its pigment lies."
+}

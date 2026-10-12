@@ -119,3 +119,35 @@ symbols. **Unmet visual requirements: none identified.** Review is local,
 not independent certification; generated rock inside the patch is not
 pixel-identical. `wall-review-23.json` records the dimensions, formats,
 preservation check, hashes and limitations.
+
+## The Stalks Accounted For — step 24
+
+[Handoff Source Check](tools/handoff-source/README.md) checks a verified archive
+against its current source directory, reporting stale, missing and omitted
+files without extraction or payload execution. It matched the real inherited
+bundle's two source files. All 21 new tests and 38 inherited tests passed.
+
+```sh
+python3 -B line-2/tools/handoff-source/source_check.py demo
+```
+
+The new mark is loose stalks beside their tied bundle: **Loose stalks match the
+bundle that carries them.** The image generator supplied the motif; only its
+pigment was transferred to vacant upper rock, rectangle `(555,205)`–`(760,337)`
+with exclusive upper bounds. Every decoded RGB pixel outside it matches the
+SHA-256-verified record-23 ancestor. No old painting or hand was altered.
+
+Finished wall: `artifacts/line-2/wall.png` and identical named output
+`artifacts/line-2/wall-v4.png`, **1254 × 1254 RGB PNG**. Record:
+`dist/line-2/24.json`; thumbnail: `dist/line-2/24.jpg`, **512 × 512 JPEG**,
+73,524 bytes. Dimensions, formats, prompt, hashes and preservation details are
+in `wall-review-24.json`; actual command results are in `checks-24.json`.
+
+Inspected both finished images. Pepe remains recognizable with heavy-lidded
+eyes and a broad mouth; each inherited hand has four fingers plus a thumb,
+five digits total. No new hands or handprints were added. The new worn charcoal
+and red ochre mark lets the original stone show through. No writing, numerals,
+logos, watermarks, borders, people or prohibited symbols were observed.
+**Unmet visual requirements: none identified.** Local review is not independent
+certification. The mark is intentionally small and worn; the thumbnail softens
+its finer strokes. GOAL.md and all 23 older records remain unchanged.
