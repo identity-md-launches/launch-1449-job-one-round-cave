@@ -26,11 +26,17 @@ COMMANDS = [
     ['shared/tx-preflight/test_preflight.py'],
     ['shared/tx-preflight/preflight.py', 'demo'],
     ['gathering/review_checks.py'],
+    ['line-1/tools/endpoint-policy/test_policy.py'],
+    ['line-1/tools/endpoint-policy/endpoint_policy.py', '--demo'],
+    ['line-2/tools/handoff-source/test_source.py'],
+    ['line-2/tools/handoff-source/source_check.py', 'demo'],
+    ['line-3/tools/unsigned-diff/test_unsigned_diff.py'],
+    ['line-3/tools/unsigned-diff/unsigned_diff.py', '--demo'],
 ]
 
 
 def main():
-    directory = Path('gathering/checks/round-03')
+    directory = Path('gathering/checks/round-04')
     directory.mkdir(parents=True, exist_ok=True)
     results = []
     for index, args in enumerate(COMMANDS, 1):

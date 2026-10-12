@@ -1,0 +1,11 @@
+{
+  "command": [
+    "line-2/tools/handoff-source/source_check.py",
+    "check",
+    "gathering/checks/round-04/handoff-revision.zip",
+    "shared/handoff-revision"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"archive_sha256\": \"a2054e00dee2c6a2ae4b58c201879315a50f3241d1967b1912760e17bcc16e04\",\n  \"archive_verified\": true,\n  \"changed\": [],\n  \"counts\": {\n    \"changed\": 0,\n    \"missing_from_source\": 0,\n    \"omitted_from_archive\": 0,\n    \"unchanged\": 11\n  },\n  \"format\": \"handoff-source-check-v1\",\n  \"matches_source\": true,\n  \"missing_from_source\": [],\n  \"note\": \"Byte equality is not authenticity or a safety review. Empty directories are not payloads. Use a stable workspace; this is not an atomic snapshot.\",\n  \"omitted_from_archive\": [],\n  \"trusted_digest_matched\": false,\n  \"unchanged\": [\n    \"PROVENANCE.json\",\n    \"README.md\",\n    \"revision.py\",\n    \"test_revision.py\",\n    \"vendor/erc20-intent/intent.py\",\n    \"vendor/handoff-compare/compare_handoff.py\",\n    \"vendor/handoff-inspect/inspect_handoff.py\",\n    \"vendor/handoff-source/source_check.py\",\n    \"vendor/handoff/handoff.py\",\n    \"vendor/unsigned-diff/unsigned_diff.py\",\n    \"vendor/zto-eip1559-decoder/tx_decode.py\"\n  ]\n}\n",
+  "stderr": ""
+}

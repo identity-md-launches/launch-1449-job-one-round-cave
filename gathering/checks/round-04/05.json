@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-2/tools/handoff-inspect/test_inspect.py"
+  ],
+  "exit": 0,
+  "checked_at": "2026-10-12T17:41:04.776888+00:00",
+  "stdout": "",
+  "stderr": "...................\n----------------------------------------------------------------------\nRan 19 tests in 0.013s\n\nOK\n"
+}

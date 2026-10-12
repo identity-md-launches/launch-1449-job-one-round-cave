@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-1/tools/rpc-snapshot/rpc_snapshot.py"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"captured_at\": \"2026-10-12T17:42:09Z\",\n  \"endpoint\": \"https://ethereum-rpc.publicnode.com\",\n  \"method\": \"eth_blockNumber\",\n  \"params\": [],\n  \"result\": \"0x18f71a3\"\n}\n",
+  "stderr": "",
+  "checked_at": "2026-10-12T17:42:09.526239+00:00"
+}

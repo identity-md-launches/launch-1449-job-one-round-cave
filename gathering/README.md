@@ -1,83 +1,79 @@
-# Two Witnesses, One Knot
+# The Changed Edge — Gathering 04
 
-Gathering 03 brings the lines' newer validators into the portable **Evidence
-review** kit. Two witness stones share a knot so the next worker can carry
-evidence that was checked.
+Handoff revision joins the lines' archive and unsigned-transaction comparisons.
+Two joined flints, one chipped, represent checking a change before carrying it
+onward. REPORT.md records every line's trials, results and remaining gaps;
+COINS.md says none because all tools work with existing ZTO/IMD or offline.
 
-## Outputs
+## Outputs and checks
 
-- `artifacts/gathering/wall-v3.png`: required output, 1254×1254, PNG, 8-bit RGB.
-- `artifacts/gathering/wall.png`: byte-identical continuing wall.
-- `dist/gathering/03.jpg`: 512×512 baseline color JPEG, below 100 KB.
-- `dist/gathering/03.json`: the prescribed six-trait numbered record; its PNG
-  SHA-256 is `dceafc14303f22e203ee0ba20b812094d33ed9c2d0bd7575a1af182b90456f0e`.
-- `REPORT.md`: current trials, working behavior, gaps and scope for each line.
-- `COINS.md`: none; existing ZTO/IMD suffice and no deployment is proposed.
-- `../shared/evidence-review/`: portable Python kit, provenance, real retained
-  examples and 16 passing offline tests.
-- `../dist/index.html` and `../dist/goals.json`: rebuilt gallery and exact goals.
+- `artifacts/gathering/wall-v4.png`: required output, 1254×1254, 8-bit RGB PNG.
+- `artifacts/gathering/wall.png`: byte-identical continuing gathering wall.
+- `dist/gathering/04.jpg`: 512×512 baseline color JPEG, 67,724 bytes.
+- `dist/gathering/04.json`: prescribed six-trait record, actual PNG SHA-256 URL.
+- `dist/goals.json`: exact four line goals; `dist/index.html`: all 117 records.
+- `shared/handoff-revision/`: portable standard-library Python kit with provenance.
 
-The named PNG output remains untracked for the daemon's separate upload. No
-line source, configuration, tests, records or thumbnails were modified. Earlier
-gathering records/JPEGs remain unchanged. This is not the first gathering, so
-existing placeholders were preserved rather than reseeded.
-
-## Visual review
-
-The preceding local wall was missing. Record 02's actual painted artifact was
-recovered and its SHA-256 checked:
-`e53d77dac9c1762b895aa8bff66ab138eff44e9e5cca68fac531718ffef31857`.
-Newer placeholder records' bare-cave URLs were not used. The built-in image tool
-generated the witness stones as an edit of that wall. ffmpeg composited only
-the vacant rectangle x=450, y=150, width=270, height=156, with a 12-pixel alpha
-fade. No intermediate picture was saved in the workspace: the generated edit
-occupied wall-v3.png until replaced by the final whole wall.
-
-The finished PNG was inspected at full size, its patch enlarged in memory,
-and its actual required JPEG inspected. Stone, cracks, warm light, size and
-framing remain. Decoded RGB comparison found **zero changed pixels outside the
-patch**, preserving 1,530,396 outside pixels exactly. The ancestral Pepe, his
-four bundled stones, and the torch beside the scroll are all outside the patch.
-None was erased, moved, redrawn or cleaned off. The preservation receipt is
-`checks/round-03/image-preservation.json`.
-
-Pepe retains his wide mouth and heavy-lidded eyes, painted with worn charcoal,
-ochre and chalk on exposed rock. Both visible inherited hands were counted:
-**four fingers and one thumb, five digits each**. No new hands or handprints
-were added. The two witness stones and knot use earth pigments and chalk dots.
-No letters, numbers, captions, signatures, logos, watermarks, artificial borders
-or frames, real people, political or hateful symbols were observed. Paintings
-remain flat handmade pigment against the inherited naturalistic cave surface.
-
-Unmet visual requirements: **none identified on inspection**. Limitation:
-the new motif's local rock texture comes from a generative edit blended into
-the reference; only the area outside the small patch is pixel-identical.
-Visual observation is not an independent certification of artistic fidelity.
-
-The JPEG is reduced directly from the finished wall, not generated separately.
-`make_thumbnail.py` uses only Python's standard library. ffmpeg was needed only
-for painting composition and pixel comparison, not by any delivered worker tool.
-No additional image was saved as new source or a preview.
-
-## Reproduce
-
-From the repository root, offline:
+Offline checks passed: 147 line tests, 34 inherited shared tests, 13 new shared
+checks, nine inherited regressions and all offline demos. Native Line 2 inspected
+and source-checked the actual 73,901-byte shared package. A copied standalone kit
+ran without line folders. Fresh real ZTO PublicNode observations and the failed
+HTTP-429 two-provider trial are retained in `checks/round-04/`.
 
 ```sh
-python3 -B shared/evidence-review/review.py demo
-python3 -B shared/evidence-review/test_review.py
+python3 -B shared/handoff-revision/revision.py demo
+python3 -B shared/handoff-revision/test_revision.py
 python3 -B gathering/check_deliverable.py
 ```
 
-`run_checks.py` reruns the 20 inherited check/demo commands and saves bounded
-receipts. `review_checks.py` exercises the first gathering's nine regressions;
-all now pass. `build_gallery.py` rebuilds goals and gallery;
-`make_thumbnail.py` rebuilds only this round's JPEG. No delivered check depends
-on scratch files or network access.
+`run_checks.py` reruns the 26 reviewed offline commands, saving bounded receipts.
+`build_gallery.py` rebuilds exact goals and gallery; `make_thumbnail.py` rebuilds
+only this round's JPEG. All delivered worker tools use only the standard library.
+No dependency installation, remote imports or submodules were added.
 
-`compose_mark.py` expects record 02's original wall at wall.png and the original
-generated edit at wall-v3.png. It refuses the already-finished wall as input,
-preventing accidental repainting. Generation prompt and cache identifier are
-in `IMAGE-PROMPTS.md`. Gallery structure checks cover every numbered record,
-local thumbnails, links and descending painted order. No browser automation
-was available for separate viewport rendering.
+## Image production and visual review
+
+The local gathering wall was absent. The last painted record, 03, was recovered
+from its artifact URL and checked against its SHA-256:
+`dceafc14303f22e203ee0ba20b812094d33ed9c2d0bd7575a1af182b90456f0e`.
+Placeholder bare-cave URLs were not used. The assignment's installed image
+creation tool generated a charcoal pigment insert at the required output path.
+The insert was inspected, then overwritten with the finished whole wall.
+No additional picture or preview was saved in the workspace.
+
+`compose_mark_v4.py` cropped the motif in memory, removed white, and transferred
+only worn charcoal pigment to vacant rock at x=260, y=270, width=165, height=110.
+The original stone shows through. Decoded RGB comparison found **2,388 changed
+pixels and zero changed pixels outside that rectangle**. All earlier marks,
+Pepe, bundled stones, torch, scroll, rock cracks, torchlight, dimensions and
+framing remain unchanged. No ancestor was erased, moved or redrawn.
+
+The full PNG and actual JPEG were visually inspected. Pepe retains his wide
+mouth and big heavy-lidded eyes. Both inherited hands were counted as **four
+fingers and one thumb, five digits each**. No new hands or handprints were added.
+The flints have uneven, worn charcoal outlines and bare stone interiors. No
+letters, numbers, captions, signatures, logos, watermarks, borders, frames,
+real people, political or hateful symbols were observed.
+
+Unmet visual requirements: **none identified on inspection**. Limitations:
+manual review is not independent artistic certification. Inherited naturalistic
+rock texture is preserved, with flat pigment marks. The small new motif is
+intentionally restrained and may require viewing the full wall to see its chip.
+The tool requested 1024×1024 for the insert but returned 1254×1254; its native
+size was decoded before compositing. The final wall preserves the ancestor's
+1254×1254 dimensions. The JPEG is reduced from that final wall, never separately
+generated. Final PNG SHA-256:
+`23821808be606f6f8ea922f2e1457be6d8af17050aec08d9088b98113ec027d6`.
+
+Imagegen prompt and tool mode are recorded in IMAGE-PROMPTS.md. The composition
+script requires the original record-03 wall plus the generated insert and
+refuses an already-finished wall, preventing accidental repainting.
+
+## Scope
+
+No line source, record or thumbnail was changed. Records 01–03 remain unchanged;
+record 04 replaces its existing placeholder. This is a later gathering, so
+placeholders were preserved rather than reseeded. The final named PNG output
+remains untracked for the daemon's upload. The structural checker validates
+formats, hashes, gallery order, size limits, current provenance and unchanged
+line files. It does not certify behavior, provider truth or visual quality.

@@ -1,0 +1,8 @@
+{
+  "command": [
+    "shared/handoff-revision/test_revision.py"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "test_bounds_and_workspace_guard (__main__.RevisionTests.test_bounds_and_workspace_guard) ... ok\ntest_cli_error_no_partial_report (__main__.RevisionTests.test_cli_error_no_partial_report) ... ok\ntest_demo_changed_fee (__main__.RevisionTests.test_demo_changed_fee) ... ok\ntest_duplicate_json_nonstandard_and_false_summary_refused (__main__.RevisionTests.test_duplicate_json_nonstandard_and_false_summary_refused) ... ok\ntest_missing_unsafe_or_manifest_path (__main__.RevisionTests.test_missing_unsafe_or_manifest_path) ... ok\ntest_optional_source_and_cli_mismatch (__main__.RevisionTests.test_optional_source_and_cli_mismatch) ... ok\ntest_repaired_crc_tamper_fails_hash (__main__.RevisionTests.test_repaired_crc_tamper_fails_hash) ... ok\ntest_same_archive_and_original_bytes (__main__.RevisionTests.test_same_archive_and_original_bytes) ... ok\ntest_same_selector_approval_change_is_visible (__main__.RevisionTests.test_same_selector_approval_change_is_visible) ... ok\ntest_semantically_identical_spelling_still_file_change (__main__.RevisionTests.test_semantically_identical_spelling_still_file_change) ... ok\ntest_signed_either_side_refused (__main__.RevisionTests.test_signed_either_side_refused) ... ok\ntest_trusted_digests (__main__.RevisionTests.test_trusted_digests) ... ok\ntest_verify_second_before_parse (__main__.RevisionTests.test_verify_second_before_parse) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.011s\n\nOK\n"
+}

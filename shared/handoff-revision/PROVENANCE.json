@@ -1,0 +1,53 @@
+{
+  "sources": [
+    {
+      "source": "line-2/tools/handoff/handoff.py",
+      "copy": "vendor/handoff/handoff.py",
+      "source_sha256": "0b3878b76c13a18951601aef2ec48daf8c56fbb195fea953be797a7f1d8df97d",
+      "copy_sha256": "0b3878b76c13a18951601aef2ec48daf8c56fbb195fea953be797a7f1d8df97d",
+      "adaptation": "byte-identical"
+    },
+    {
+      "source": "line-2/tools/handoff-inspect/inspect_handoff.py",
+      "copy": "vendor/handoff-inspect/inspect_handoff.py",
+      "source_sha256": "62cc8e4b31c231eb394bd5f3053c2db29c05fc4fa62d3aeafe76027a52b8103a",
+      "copy_sha256": "62cc8e4b31c231eb394bd5f3053c2db29c05fc4fa62d3aeafe76027a52b8103a",
+      "adaptation": "byte-identical"
+    },
+    {
+      "source": "line-2/tools/handoff-compare/compare_handoff.py",
+      "copy": "vendor/handoff-compare/compare_handoff.py",
+      "source_sha256": "67310be1ac39c458c7aa063a267a992115bf889007d5d9c1ac659e45940fec19",
+      "copy_sha256": "d4c8d09ac67b43e9d044a75701a35212875ef7a42d120de635e6d0fb3e1b3d91",
+      "adaptation": "fixed dependency location only"
+    },
+    {
+      "source": "line-2/tools/handoff-source/source_check.py",
+      "copy": "vendor/handoff-source/source_check.py",
+      "source_sha256": "dc1d175220e15ccdadbf7520d691920a6e25040e4e4d9dbd7ebd8c90d8e9f5de",
+      "copy_sha256": "446c2fa71c6e9c980d44ffde96f2d24b5a33d0eac9026aad36154d07e6549691",
+      "adaptation": "fixed dependency location only"
+    },
+    {
+      "source": "line-3/tools/erc20-intent/intent.py",
+      "copy": "vendor/erc20-intent/intent.py",
+      "source_sha256": "5502c5be013a0e7f1c6226627fe6feee3d732175bfc328f413e7d49fc22ec101",
+      "copy_sha256": "5502c5be013a0e7f1c6226627fe6feee3d732175bfc328f413e7d49fc22ec101",
+      "adaptation": "byte-identical"
+    },
+    {
+      "source": "line-3/tools/zto-eip1559-decoder/tx_decode.py",
+      "copy": "vendor/zto-eip1559-decoder/tx_decode.py",
+      "source_sha256": "c5d852004603011b890a991d6ef988093d1974df00c48549de8f076029146757",
+      "copy_sha256": "c5d852004603011b890a991d6ef988093d1974df00c48549de8f076029146757",
+      "adaptation": "byte-identical"
+    },
+    {
+      "source": "line-3/tools/unsigned-diff/unsigned_diff.py",
+      "copy": "vendor/unsigned-diff/unsigned_diff.py",
+      "source_sha256": "30a81da3bc957010d7dcc222f2d7512f73a960f26df67854bc86589ef7e43e48",
+      "copy_sha256": "30a81da3bc957010d7dcc222f2d7512f73a960f26df67854bc86589ef7e43e48",
+      "adaptation": "byte-identical"
+    }
+  ]
+}

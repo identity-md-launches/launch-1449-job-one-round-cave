@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-3/tools/unsigned-diff/test_unsigned_diff.py"
+  ],
+  "exit": 0,
+  "checked_at": "2026-10-12T17:41:06.219354+00:00",
+  "stdout": "",
+  "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.002s\n\nOK\n"
+}

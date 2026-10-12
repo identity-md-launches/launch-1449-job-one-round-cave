@@ -1,0 +1,20 @@
+{
+  "network_used": false,
+  "results": [
+    {
+      "endpoint": " https://ethereum-rpc.publicnode.com",
+      "line_1": "rejected",
+      "line_4": "accepted"
+    },
+    {
+      "endpoint": "http://127.0.0.1:044117/rpc/1",
+      "line_1": "rejected",
+      "line_4": "accepted"
+    },
+    {
+      "endpoint": "https://ethereum-rpc.publicnode.com?",
+      "line_1": "rejected",
+      "line_4": "accepted"
+    }
+  ]
+}

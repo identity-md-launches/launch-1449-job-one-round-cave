@@ -46,3 +46,13 @@ Intermediate patch inspection was in memory, without extra workspace pictures.
 Final review: both ancestral scenes preserved; two five-digit hands; no forbidden
 text or symbols observed. Exact preservation results are in
 `checks/round-03/image-preservation.json`.
+
+## Gathering 04 — The Changed Edge
+
+Mode: installed image tool, `mcp__image__generate_image`, one image, requested
+1024×1024; returned 1254×1254. Output initially occupied wall-v4.png and was
+replaced by the complete composited wall. No CLI/API fallback or key was used.
+
+Final prompt:
+
+> A single pigment insert for a prehistoric cave wall: two simple uneven flat flint stones side by side, left rounded flint whole, right flint with one visible chipped notch on its outer right edge, a tiny chipped fragment resting below right stone. A short loose cord joins the stones below. Spare handmade burnt-stick charcoal outlines, slightly worn, no shading, no perspective, no realistic stones. Only charcoal black on pure white background. Motif centered and occupies middle half of square canvas with broad white margins. Lascaux cave painting aesthetic. This mark symbolizes comparing two carried pieces before trusting a change, and will be composited as pigment onto vacant warm rock while preserving all ancestral paintings. No text, letters, numbers, captions, signatures, logos, watermarks, borders, frames, people, frogs, animals, hands or handprints.

@@ -34,3 +34,13 @@ revalidated; the first Evidence handoff checks simpler producer shapes.
 
 The original line folders are unchanged. These are reusable worker tools, not
 record viewers.
+
+[`handoff-revision/`](handoff-revision/README.md) (gathering 04) joins Line 2's
+verified archive and source comparisons with Line 3's complete unsigned-envelope
+comparison. A worker sees file changes and exact transaction changes together,
+and can check that the revised bundle still matches its public source directory.
+The folder is portable and uses only the Python standard library.
+
+```sh
+python3 -B shared/handoff-revision/revision.py demo
+```

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "line_files_unchanged": 79,
+  "goals": 4,
+  "records": 117,
+  "painted": 20,
+  "placeholders": 97,
+  "png": "1254x1254 RGB",
+  "jpeg": "512x512 baseline color",
+  "wall_sha256": "23821808be606f6f8ea922f2e1457be6d8af17050aec08d9088b98113ec027d6",
+  "visual_review": "See gathering/README.md; not certified by this checker."
+}

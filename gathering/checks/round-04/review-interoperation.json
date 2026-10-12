@@ -1,0 +1,162 @@
+{
+  "schema": "handoff-revision/1",
+  "files": {
+    "format": "handoff-comparison-v1",
+    "verified": true,
+    "before": {
+      "archive_sha256": "6ff1ca065b5927ea0327854dccb0500dcc8f55f80db78ff98cb6dde53faa510b",
+      "archive_bytes": 79876,
+      "file_count": 5,
+      "payload_bytes": 78415,
+      "trusted_digest_matched": false
+    },
+    "after": {
+      "archive_sha256": "42e5c0738fdbb1a1d423dfc302df7fa11001fe109e6ef3a27c9ddae64bc0b5c8",
+      "archive_bytes": 79876,
+      "file_count": 5,
+      "payload_bytes": 78415,
+      "trusted_digest_matched": false
+    },
+    "same_payload": false,
+    "same_archive": false,
+    "payload_byte_delta": 0,
+    "counts": {
+      "added": 0,
+      "removed": 0,
+      "modified": 2,
+      "unchanged": 3
+    },
+    "added": [],
+    "removed": [],
+    "modified": [
+      {
+        "path": "REVIEW.json",
+        "before": {
+          "bytes": 3926,
+          "sha256": "047f1258c0854cd185614a6dede9ec37e74f907389ea4531b3299a53afcffe49"
+        },
+        "after": {
+          "bytes": 3926,
+          "sha256": "99aa3c13447f502f4f7e25cb1a1c5f72f81ca98885d83e8b10fd8d545f67594a"
+        }
+      },
+      {
+        "path": "evidence/unsigned-transaction.json",
+        "before": {
+          "bytes": 165,
+          "sha256": "aba37381a78ac320d15eda99087ddd684f0d0d96baed66d32dec6e140382787d"
+        },
+        "after": {
+          "bytes": 165,
+          "sha256": "8f32a5e74a2878ab2fd12797d62697b3d93abb56d0bef4470d4c2f40ee025fc3"
+        }
+      }
+    ],
+    "unchanged": [
+      "evidence/pinned-snapshot.json",
+      "evidence/transfer-comparison.json",
+      "evidence/transfer-window.json"
+    ],
+    "note": "Integrity is not authenticity without independently trusted archive hashes. Renames are reported as removal plus addition; payload code is never executed."
+  },
+  "unsigned": {
+    "status": "changed",
+    "meaning": "Exact unsigned envelope comparison; identical does not mean safe to sign.",
+    "beforeBytes": {
+      "sha256": "106591983d34a682ebe28e41014d8a3157293293f229a4208f1c2079faf30d91",
+      "byteLength": 46
+    },
+    "afterBytes": {
+      "sha256": "8d3c1060b40ac18285b9dc86f0f41ed0ee1bd0e075107b50118245f7f4f9f4cf",
+      "byteLength": 46
+    },
+    "changes": [
+      {
+        "field": "maxFeePerGas",
+        "before": "2000000000",
+        "after": "3000000000",
+        "meaning": "The total fee cap changed (wei per gas)."
+      }
+    ],
+    "feeBudgetDeltaWei": {
+      "gasFeeCapWei": "100000000000000",
+      "valuePlusGasFeeCapWei": "100000000000000"
+    },
+    "beforeInspection": {
+      "transaction": {
+        "type": "EIP-1559",
+        "typeByte": "0x02",
+        "chainId": "1",
+        "nonce": "0",
+        "maxPriorityFeePerGas": "1000000000",
+        "maxFeePerGas": "2000000000",
+        "gasLimit": "100000",
+        "to": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+        "value": "0",
+        "data": "0x18160ddd",
+        "accessList": [],
+        "calldataSelector": "0x18160ddd"
+      },
+      "destinationLabel": "ZTO",
+      "feeBudget": {
+        "gasFeeCapWei": "200000000000000",
+        "valuePlusGasFeeCapWei": "200000000000000",
+        "meaning": "Gas limit times maximum fee per gas; excludes token transfers. Not an estimate."
+      },
+      "calldata": {
+        "status": "abi-pattern-match",
+        "selector": "0x18160ddd",
+        "candidateMethod": "totalSupply",
+        "arguments": {}
+      },
+      "warnings": [
+        "Offline inspection only: no chain state, simulation, sender or contract behavior verified.",
+        "Selectors can collide; an ABI pattern match does not prove ERC-20 behavior."
+      ]
+    },
+    "afterInspection": {
+      "transaction": {
+        "type": "EIP-1559",
+        "typeByte": "0x02",
+        "chainId": "1",
+        "nonce": "0",
+        "maxPriorityFeePerGas": "1000000000",
+        "maxFeePerGas": "3000000000",
+        "gasLimit": "100000",
+        "to": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+        "value": "0",
+        "data": "0x18160ddd",
+        "accessList": [],
+        "calldataSelector": "0x18160ddd"
+      },
+      "destinationLabel": "ZTO",
+      "feeBudget": {
+        "gasFeeCapWei": "300000000000000",
+        "valuePlusGasFeeCapWei": "300000000000000",
+        "meaning": "Gas limit times maximum fee per gas; excludes token transfers. Not an estimate."
+      },
+      "calldata": {
+        "status": "abi-pattern-match",
+        "selector": "0x18160ddd",
+        "candidateMethod": "totalSupply",
+        "arguments": {}
+      },
+      "warnings": [
+        "Offline inspection only: no chain state, simulation, sender or contract behavior verified.",
+        "Selectors can collide; an ABI pattern match does not prove ERC-20 behavior."
+      ]
+    },
+    "limits": [
+      "Synthetic demos are not observed or executed transactions.",
+      "SHA-256 fingerprints are not Ethereum transaction hashes or signer identities.",
+      "No sender, chain state, simulation, gas sufficiency or safety is established.",
+      "ABI patterns do not prove contract behavior; review full calldata and both inspections."
+    ]
+  },
+  "transaction_path": "evidence/unsigned-transaction.json",
+  "provenance": [
+    "synthetic unsigned demo",
+    "synthetic unsigned demo"
+  ],
+  "limits": "Archive integrity and unsigned byte comparison only; no authenticity, sender, chain state, execution, signing or safety is established."
+}

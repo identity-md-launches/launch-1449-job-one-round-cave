@@ -1,0 +1,18 @@
+{
+  "source_sha256": "dceafc14303f22e203ee0ba20b812094d33ed9c2d0bd7575a1af182b90456f0e",
+  "wall_sha256": "23821808be606f6f8ea922f2e1457be6d8af17050aec08d9088b98113ec027d6",
+  "rectangle": {
+    "x": 260,
+    "y": 270,
+    "width": 165,
+    "height": 110
+  },
+  "changed_pixels": 2388,
+  "changed_pixels_outside_rectangle": 0,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "8-bit RGB PNG",
+  "method": "Generated charcoal only; white removed in memory, stone texture retained."
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-4/tools/transfer-crosscheck/crosscheck.py",
+    "--blocks",
+    "12"
+  ],
+  "exit": 2,
+  "stdout": "",
+  "stderr": "transfer-crosscheck: network or JSON failure: HTTP Error 429: Too Many Requests\n",
+  "checked_at": "2026-10-12T17:42:11.144606+00:00"
+}
